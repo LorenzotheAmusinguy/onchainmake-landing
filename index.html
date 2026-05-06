@@ -1,16 +1,488 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
-<title>OnChainMake — Coming Soon</title>
-<style>
-  body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;background:#0A2342;color:#fff;text-align:center}
-  h1{font-size:3rem;margin:0}
-  p{color:#FF6B00;font-size:1.25rem;margin-top:.5rem}
-</style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnChainMake — Instant Settlement for Custom Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="main.css" />
+</head>
 <body>
-  <div>
-    <h1>OnChainMake</h1>
-    <p>Make‑to‑Order, the Smart Way — launching soon.</p>
+
+<!-- ═══════════════════════════════════════════ NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <div class="logo-mark">O</div>
+        <span class="logo-text">OnChain<span>Make</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#pain">The Problem</a></li>
+        <li><a href="#solution">How It Works</a></li>
+        <li><a href="#join">Join Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+        <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
+</nav>
+
+<!-- Drawer is OUTSIDE nav to avoid iOS stacking context clipping -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="#pain">The Problem</a>
+  <a href="#solution">How It Works</a>
+  <a href="#join">Join Us</a>
+  <a href="#contact">Contact</a>
+  <div class="nav-drawer-cta">
+    <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+    <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+  </div>
+</div>
+<!-- ═══════════════════════════════════════════ HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="tag">Phase 0 — Founding Members</div>
+        <h1 class="hero-headline">
+          Custom Manufacturing.<br/>
+          <em>Paid in Seconds.</em>
+        </h1>
+        <p class="hero-sub">
+          OnChainMake eliminates payment friction in make-to-order manufacturing.
+          <strong>Smart contract escrow</strong> releases funds the moment a milestone is verified,
+          not 60 days later.
+        </p>
+        <div class="hero-cta-group">
+          <p class="hero-cta-label">Who are you?</p>
+          <div class="audience-cards">
+            <a href="maker.html" class="audience-card maker">
+              <div class="audience-icon">🏭</div>
+              <div class="audience-title">Manufacturer</div>
+              <div class="audience-desc">3D print bureaus, job shops &amp; custom make-to-order factories</div>
+              <span class="audience-link">Join as Maker →</span>
+            </a>
+            <a href="buyer.html" class="audience-card buyer">
+              <div class="audience-icon">📦</div>
+              <div class="audience-title">Buyer / OEM</div>
+              <div class="audience-desc">Procurement teams sourcing custom parts with verified delivery</div>
+              <span class="audience-link">Join as Buyer →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-row">
+          <div class="stat-label">Average payment delay</div>
+          <div class="stat-value accent">60–90</div>
+          <div class="stat-sub">days DSO for custom manufacturing</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">OnChainMake settlement</div>
+          <div class="stat-value">&lt;60</div>
+          <div class="stat-sub">seconds upon milestone verification</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Phase 0 — Founding Slots</div>
+          <div class="stat-value accent">Limited</div>
+          <div class="stat-sub">No fees. No subscription. Just your feedback.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PAIN -->
+<section id="pain">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">The Problem</div>
+      <h2 class="section-title">Manufacturing is Broken<br/>at the Finish Line</h2>
+      <div class="divider"></div>
+      <p class="section-sub">You deliver the part. Then you wait. The payment process hasn't changed in 40 years, and it's costing small manufacturers their business.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-number">01</div>
+        <div class="pain-icon">⏳</div>
+        <div class="pain-title">Payment Delays Kill Cash Flow</div>
+        <p class="pain-body">Net-60 and Net-90 terms force manufacturers to self-finance production. You bear 100% of the risk while buyers sit on your working capital.</p>
+        <div class="pain-stat">60–90 days<span>average DSO in custom manufacturing</span></div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-number">02</div>
+        <div class="pain-icon">⚖️</div>
+        <div class="pain-title">Disputes Have No Referee</div>
+        <p class="pain-body">When a buyer claims a part was "not to spec," there's no objective record. Disputes drag on for weeks, payment gets withheld, and relationships collapse.</p>
+        <div class="pain-stat">~15%<span>of MTO orders end in payment disputes</span></div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-number">03</div>
+        <div class="pain-icon">📉</div>
+        <div class="pain-title">Idle Capacity Goes Monetised</div>
+        <p class="pain-body">Small manufacturers can't sell unused production slots. There's no marketplace. That capacity evaporates: revenue that could have existed, doesn't.</p>
+        <div class="pain-stat">30–40%<span>average idle capacity in US 3D print bureaus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SOLUTION -->
+<section id="solution">
+  <div class="container">
+    <div class="solution-layout">
+      <div>
+        <div class="section-header">
+          <div class="tag">The Solution</div>
+          <h2 class="section-title">Smart Escrow.<br/>Instant Settlement.</h2>
+          <div class="divider"></div>
+          <p class="section-sub">OnChainMake wraps every custom manufacturing order in a smart contract that holds, verifies, and releases payment automatically. No banks, no intermediaries, no delays.</p>
+        </div>
+        <div class="solution-steps">
+          <div class="solution-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title">Buyer Deposits into Escrow</div>
+              <p class="step-body">The buyer locks USDC into a smart contract before production begins. The manufacturer sees confirmed funds. Zero credit risk, zero chasing invoices.</p>
+            </div>
+          </div>
+          <div class="solution-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title">Milestones Trigger Verification</div>
+              <p class="step-body">As production hits key milestones, the smart contract checks objective criteria. No human gatekeeping. No subjective disputes.</p>
+            </div>
+          </div>
+          <div class="solution-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title">Funds Released in Seconds</div>
+              <p class="step-body">Upon milestone completion, payment flows directly to the manufacturer. On Arbitrum blockchain. In under 60 seconds. Always.</p>
+            </div>
+          </div>
+          <div class="solution-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-title">Capacity Tokenised &amp; Tradeable</div>
+              <p class="step-body">Unused production slots become tokenised assets (CSTs) tradeable in a marketplace. Your idle time becomes revenue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flow-card">
+          <div class="flow-title">Live Order Flow</div>
+          <div class="flow-nodes">
+            <div class="flow-node">
+              <div class="node-dot"></div>
+              <div>
+                <div class="node-text">Buyer deposits $50,000 USDC</div>
+                <div class="node-sub">Locked in smart contract · Arbitrum</div>
+              </div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <div class="node-dot"></div>
+              <div>
+                <div class="node-text">Manufacturer starts production</div>
+                <div class="node-sub">Confirmed funding visible on dashboard</div>
+              </div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <div class="node-dot"></div>
+              <div>
+                <div class="node-text">Milestone 1: Print complete ✓</div>
+                <div class="node-sub">$15,000 released → maker's wallet</div>
+              </div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <div class="node-dot"></div>
+              <div>
+                <div class="node-text">Milestone 2: QA passed ✓</div>
+                <div class="node-sub">$20,000 released → maker's wallet</div>
+              </div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <div class="node-dot grey"></div>
+              <div>
+                <div class="node-text">Milestone 3: Delivery confirmed</div>
+                <div class="node-sub">$15,000 pending → on delivery</div>
+              </div>
+            </div>
+          </div>
+          <div class="settlement-badge">
+            <div class="settlement-icon">⚡</div>
+            <div>
+              <div class="settlement-text">Settlement in &lt;60 seconds</div>
+              <div class="settlement-sub">vs. industry average 60–90 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ JOIN -->
+<section id="join">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Phase 0 — Founding Members</div>
+      <h2 class="section-title">Shape the Platform.<br/>At No Cost.</h2>
+      <div class="divider"></div>
+      <p class="section-sub">We're inviting a select group of manufacturers and buyers to test and co-build OnChainMake. No fees. No subscription. Your feedback is the price of admission.</p>
+    </div>
+    <div class="join-grid">
+      <div class="join-card maker">
+        <div class="join-label">For Manufacturers</div>
+        <div class="join-title">Makers</div>
+        <p class="join-body">3D print service bureaus, CNC shops, and custom manufacturers ready to eliminate payment delays and prove they can get paid in seconds, not months.</p>
+        <ul class="join-perks">
+          <li>Full platform access during Phase 0 at zero cost</li>
+          <li>Direct line to the founding team — your feedback shapes the product</li>
+          <li>Founding member pricing locked in for Phase 1 launch</li>
+          <li>Tokenise and list your capacity on the CST marketplace first</li>
+        </ul>
+        <a href="maker.html" class="btn btn-maker btn-large">
+          Apply as a Maker
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="join-note">Limited to 20 founding makers in Phase 0.</p>
+      </div>
+      <div class="join-card buyer">
+        <div class="join-label">For Buyers &amp; OEMs</div>
+        <div class="join-title">Buyers</div>
+        <p class="join-body">Procurement teams and OEMs sourcing custom parts who want full payment protection, verified milestones, and zero risk of paying for work that wasn't delivered.</p>
+        <ul class="join-perks">
+          <li>Your funds never reach the maker until milestones are verified</li>
+          <li>Immutable audit trail for every order — dispute-proof by design</li>
+          <li>Access to a vetted network of quality-verified manufacturers</li>
+          <li>Early access to compliance features for regulated verticals</li>
+        </ul>
+        <a href="buyer.html" class="btn btn-buyer btn-large">
+          Apply as a Buyer
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="join-note">No commitment required during Phase 0.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="tag">Get in Touch</div>
+        <h2 class="section-title">Talk to<br/>the Founders</h2>
+        <div class="divider"></div>
+        <p class="contact-lede">We're not a faceless startup. <strong>Every pilot in Phase 0 is handled directly by the founding team.</strong> If you have a question, you'll talk to us, not a support ticket.</p>
+        <div class="contact-meta">
+          <div class="contact-meta-item">
+            <div class="contact-meta-icon">🇬🇧</div>
+            <div>
+              <strong style="color: var(--navy); font-size:14px;">Nicola Bottai</strong>
+              <div>GTM Strategy &amp; GTM · London, UK</div>
+            </div>
+          </div>
+          <div class="contact-meta-item">
+            <div class="contact-meta-icon">🇺🇸</div>
+            <div>
+              <strong style="color: var(--navy); font-size:14px;">Lorenzo Benedetti Gassani</strong>
+              <div>US Operations · Delaware, USA</div>
+            </div>
+          </div>
+          <div class="contact-meta-item">
+            <div class="contact-meta-icon">🇮🇹</div>
+            <div>
+              <strong style="color: var(--navy); font-size:14px;">Renato Mischi</strong>
+              <div>Operations · Italy</div>
+            </div>
+          </div>
+        </div>
+        <div class="calendly-block">
+          <strong>Book a Discovery Call</strong>
+          <p>30 minutes with a founder. No sales pitch — just a straight conversation about whether this is right for you.</p>
+          <!-- Replace href with your Calendly link -->
+          <a href="https://calendly.com/YOUR_LINK" class="btn btn-outline" target="_blank">
+            View Available Times →
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Send a Message</div>
+        <!-- Replace action with HubSpot form embed or your endpoint -->
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme 3D Printing" required />
+          </div>
+          <div class="form-group">
+            <label for="role">I am a</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="maker">Manufacturer / Maker</option>
+              <option value="buyer">Buyer / OEM / Procurement</option>
+              <option value="investor">Investor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking to solve…"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-large" style="width:100%; justify-content:center;">
+              Send Message
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </button>
+            <p class="form-disclaimer">We respond within 24 hours. Your information is never shared with third parties.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-mark">O</div>
+          <span class="logo-text">OnChain<span>Make</span></span>
+        </div>
+        <p>Instant settlement infrastructure for custom manufacturing. Built on Arbitrum. Powered by smart contracts.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="maker.html">For Makers</a></li>
+          <li><a href="buyer.html">For Buyers</a></li>
+          <li><a href="#solution">How It Works</a></li>
+          <li><a href="#join">Phase 0 Program</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OnChainMake Inc. · Delaware C-Corporation · All rights reserved.</p>
+      <div class="footer-badges">
+        <span class="badge">Arbitrum</span>
+        <span class="badge">USDC</span>
+        <span class="badge">Phase 0</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════ SCRIPTS -->
+<script>
+  // ── Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navDrawer  = document.getElementById('navDrawer');
+
+hamburger.addEventListener('touchend', function(e) {
+  e.preventDefault();
+  toggle();
+});
+hamburger.addEventListener('click', function(e) {
+  toggle();
+});
+
+function toggle() {
+  const isOpen = navDrawer.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+navDrawer.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navDrawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 960) {
+    navDrawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+});
+
+  // ── Scroll fade-up animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Form stub — replace with HubSpot embed
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Sent ✓';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+    // TODO: wire to HubSpot Forms API or your endpoint
+    // fetch('https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}', { ... })
+  }
+
+  // ── Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
 </body>
 </html>
