@@ -334,7 +334,7 @@
       margin-bottom: 28px;
     }
     .hero-headline em {
-      font-style: normal;
+      /*font-style: normal;*/
       color: var(--orange);
       display: block;
     }
@@ -1552,6 +1552,7 @@
 
     /* ─── BADGE — GREEN VARIANT ──────────────────────────────── */
     .badge-green {
+      display: none;
       border-color: var(--green-mid);
       color: var(--navy);
       background: var(--green-dim);
