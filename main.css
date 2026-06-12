@@ -110,13 +110,12 @@
       height: 68px;
     }
     .logo-wrap {
-      display: flex;
+      display: contents;
       align-items: center;
       gap: 12px;
     }
     .logo-mark {
-      width: 36px; height: 36px;
-      background: var(--orange);
+      width: 30%; height: 36px;
       border-radius: 3px;
       display: flex;
       align-items: center;
@@ -129,6 +128,7 @@
       flex-shrink: 0;
     }
     .logo-text {
+      display: none;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 20px;
@@ -179,6 +179,12 @@
     .btn-outline:hover {
       border-color: rgba(255,255,255,0.35);
       background: rgba(255,255,255,0.06);
+    }
+
+    .btn-outline-calendar {
+      background: transparent;
+      border:1px solid #FA7921;
+      color: #FA7921;
     }
     /* Maker button — steel */
     .btn-maker {
