@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnChainMake — For Makers &amp; Manufacturers</title>
+  <meta name="description" content="Stop waiting 60–90 days for payment. OnChainMake smart contract escrow releases your funds the moment you hit a milestone — automatically, on-chain, in under 60 seconds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<!-- ═══════════ NAV ══════════════════════════════════════════════ -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <img src="/onchainmakelogo.png" alt="OnChainMake logo">
+        </div>
+        <span class="logo-text">OnChain<span>Make</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#phase0" class="active">Apply</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+        <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="#how">How It Works</a>
+  <a href="#benefits">Benefits</a>
+  <a href="#phase0">Apply Now</a>
+  <div class="nav-drawer-cta">
+    <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+    <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+  </div>
+</div>
+
+
+<!-- ═══════════ HERO ═════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-inner maker-grid">
+
+      <!-- LEFT: copy -->
+      <div>
+        <div class="hero-kicker">For Manufacturers &amp; Makers</div>
+        <h1 class="hero-headline">
+          Idle capacity, monetized.<br/>
+          Paid <em>in Seconds.</em>
+        </h1>
+        <p class="hero-sub">
+          You build it. You ship it. You wait 60 days.
+          <strong>OnChainMake ends that.</strong> Smart contract escrow releases
+          your payment the moment a milestone is verified — automatically,
+          on-chain, in under 60 seconds.
+        </p>
+        <div class="hero-actions">
+          <a href="#phase0" class="btn btn-primary btn-large">
+            Apply for Phase 0
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#how" class="btn btn-ghost btn-large">See How It Works</a>
+        </div>
+        <p class="hero-note">Phase 0 is <span>free</span>. No subscription. No commitment. 20 founding maker slots only.</p>
+      </div>
+
+      <!-- RIGHT: live order proof panel -->
+      <div class="proof-panel">
+        <div class="proof-header">
+          <span class="proof-header-title">Example Order</span>
+          <span class="proof-live">Live on Arbitrum</span>
+        </div>
+        <div class="proof-rows">
+          <div class="proof-row">
+            <span class="proof-row-label">Order value</span>
+            <span class="proof-row-value">$48,500 USDC</span>
+          </div>
+          <div class="proof-row">
+            <span class="proof-row-label">Buyer funds locked</span>
+            <span class="proof-row-value ok">✓ Confirmed</span>
+          </div>
+          <div class="proof-row">
+            <span class="proof-row-label">Milestone 1 — Print complete</span>
+            <span class="proof-row-value ok">$14,550 released</span>
+          </div>
+          <div class="proof-row">
+            <span class="proof-row-label">Milestone 2 — QA passed</span>
+            <span class="proof-row-value ok">$19,400 released</span>
+          </div>
+          <div class="proof-row">
+            <span class="proof-row-label">Milestone 3 — Delivery</span>
+            <span class="proof-row-value pending">$14,550 pending</span>
+          </div>
+          <div class="proof-row">
+            <span class="proof-row-label">Settlement time</span>
+            <span class="proof-row-value ok">&lt; 60 seconds</span>
+          </div>
+        </div>
+        <div class="proof-cta-row">
+          <p>Funds verified before you start. Released the moment you deliver. No chasing, no disputes.</p>
+          <a href="#phase0" class="btn btn-primary btn-full">
+            Join as a Founding Maker →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ PAIN STRIP ═══════════════════════════════════════ -->
+<section id="pain-strip">
+  <div class="container">
+    <div class="pain-strip-inner">
+      <div class="strip-stat">
+        <div class="strip-num">60–90</div>
+        <div class="strip-label">days average wait for payment<br/>in custom manufacturing</div>
+      </div>
+      <div class="strip-stat">
+        <div class="strip-num">~15%</div>
+        <div class="strip-label">of make-to-order orders<br/>end in payment disputes</div>
+      </div>
+      <div class="strip-stat">
+        <div class="strip-num">35%</div>
+        <div class="strip-label">average idle capacity in<br/>US 3D print bureaus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ HOW IT WORKS ══════════════════════════════════════ -->
+<section id="how">
+  <div class="container">
+    <div class="how-inner">
+
+      <!-- LEFT: steps -->
+      <div>
+        <div class="tag steel">How It Works</div>
+        <h2 class="section-title">Four Steps.<br/>Zero Chasing.</h2>
+        <div class="divider steel"></div>
+        <p class="section-sub">OnChainMake replaces invoices, follow-up emails, and payment disputes with a smart contract that does it all automatically.</p>
+
+        <div class="step-list">
+          <div class="step-item fade-up">
+            <div class="step-badge">1</div>
+            <div>
+              <div class="step-title">Buyer Locks Funds Before You Start</div>
+              <p class="step-body">Your buyer deposits USDC into a smart contract escrow before production begins. You see the funds confirmed on your dashboard. Reduced payment risk. Zero chasing invoices.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge">2</div>
+            <div>
+              <div class="step-title">You Set Your Production Milestones</div>
+              <p class="step-body">Break the order into milestones — print complete, QA passed, delivery confirmed. Each milestone has a payment amount attached. You define the terms upfront.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge">3</div>
+            <div>
+              <div class="step-title">Hit the Milestone. Get Paid.</div>
+              <p class="step-body">When you mark a milestone complete, the smart contract releases that payment directly to your wallet. On Arbitrum. In under 60 seconds. No approval required from the buyer.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge">4</div>
+            <div>
+              <div class="step-title">Tokenise Unused Capacity</div>
+              <p class="step-body">Got spare production slots? Tokenise them as Capacity Slot Tokens (CSTs) and list them on the OnChainMake marketplace. Your idle time becomes a revenue stream.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: phase 0 timeline card -->
+      <div>
+        <div class="timeline-card">
+          <div class="timeline-header">Phase 0 Timeline</div>
+          <div class="timeline-rows">
+            <div class="timeline-row">
+              <div class="t-dot done"></div>
+              <div>
+                <div class="t-event">Apply &amp; get accepted</div>
+                <div class="t-when">Now · Takes 2 minutes</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="t-dot"></div>
+              <div>
+                <div class="t-event">Discovery call with founding team</div>
+                <div class="t-when">Within 48 hours of applying</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="t-dot"></div>
+              <div>
+                <div class="t-event">Platform access &amp; onboarding</div>
+                <div class="t-when">Q1 2026 · Full dashboard + API</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="t-dot"></div>
+              <div>
+                <div class="t-event">First live escrow order</div>
+                <div class="t-when">Q2 2026 · Real USDC, real buyers</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="t-dot pending"></div>
+              <div>
+                <div class="t-event">Founding member pricing locked</div>
+                <div class="t-when">Phase 1 launch · Your rate is fixed forever</div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <strong>Phase 0 is free.</strong> No subscription, no transaction fees during validation. Your only cost is 30 minutes of feedback per month.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ BENEFITS ══════════════════════════════════════════ -->
+<section id="benefits">
+  <div class="container">
+    <div class="tag steel">Why Makers Join</div>
+    <h2 class="section-title">Built for the<br/>Way You Work</h2>
+    <div class="divider steel"></div>
+    <p class="section-sub">Every feature exists to solve a problem that costs you time or money today.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">🏭</span>
+        <div class="benefit-title">Sell Idle Capacity</div>
+        <p class="benefit-body">List spare production slots and let buyers book capacity. Turn idle time into revenue.</p>
+        <div class="benefit-metric">35%<small>average idle capacity you can now monetise</small></div>
+      </div>
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">🔌</span>
+        <div class="benefit-title">Qualified buyer demand.</div>
+        <p class="benefit-body">Reach buyers who already need tailored production. Build on agreed milestones.</p>
+        <div class="benefit-metric">4x<small>qualified leads ready to order</small></div>
+      </div>            
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">⚡</span>
+        <div class="benefit-title">Instant Settlement</div>
+        <p class="benefit-body">Funds hit your wallet in under 60 seconds upon milestone verification. Automatically.</p>
+        <div class="benefit-metric">&lt;60s<small>vs. 60–90 day industry average</small></div>
+      </div>
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">🔒</span>
+        <div class="benefit-title">Protected Against Non-Payment</div>
+        <p class="benefit-body">Buyer funds are locked in escrow before production starts.</p>
+        <div class="benefit-metric">close to 0%<small>credit risk on every order</small></div>
+      </div>
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">⚖️</span>
+        <div class="benefit-title">Dispute-Proof Orders</div>
+        <p class="benefit-body">Every milestone is recorded on-chain. Clear proof if there is ever a dispute.</p>
+        <div class="benefit-metric">0<small>disputes possible with on-chain proof</small></div>
+      </div>
+      <div class="benefit-card fade-up">
+        <span class="benefit-icon">📊</span>
+        <div class="benefit-title">Full Visibility Dashboard</div>
+        <p class="benefit-body">See orders, balances, milestones, and payment history in one place.</p>
+        <div class="benefit-metric">1<small>dashboard for all orders and payments</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ CST SECTION ══════════════════════════════════════ -->
+<section id="cst">
+  <div class="container">
+    <div class="cst-inner">
+
+      <!-- LEFT: copy -->
+      <div>
+        <div class="tag steel">Capacity Slot Tokens</div>
+        <h2 class="section-title">Your Idle Time<br/>is an Asset.</h2>
+        <div class="divider steel"></div>
+        <p class="section-sub mb-sm">Empty machine hours are money you're not making. OnChainMake lets you tokenise spare production capacity as CSTs — ERC-721 tokens that buyers can purchase and hold.</p>
+        <p class="section-sub">A buyer purchases your CST today. In three months, they redeem it for production. You get paid now, they lock in your capacity. Both sides win.</p>
+        <div class="mt-lg">
+          <a href="#phase0" class="btn btn-primary btn-large">Join Phase 0 →</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: marketplace preview -->
+      <div class="cst-visual">
+        <div class="cst-marketplace-label">CST Marketplace Preview</div>
+
+        <div class="cst-token">
+          <div class="cst-token-icon">🖨️</div>
+          <div>
+            <div class="cst-token-name">SLA Slot · 48hr</div>
+            <div class="cst-token-meta">Valid Q2 2026 · Build vol. up to 2L</div>
+            <div class="cst-badge">Available</div>
+          </div>
+          <div class="cst-token-price">$320</div>
+        </div>
+
+        <div class="cst-token">
+          <div class="cst-token-icon">⚙️</div>
+          <div>
+            <div class="cst-token-name">FDM Run · 5 units</div>
+            <div class="cst-token-meta">Valid Q2 2026 · ABS or PETG</div>
+            <div class="cst-badge">Available</div>
+          </div>
+          <div class="cst-token-price">$180</div>
+        </div>
+
+        <div class="cst-token sold">
+          <div class="cst-token-icon">🔬</div>
+          <div>
+            <div class="cst-token-name">Resin Slot · Fine</div>
+            <div class="cst-token-meta">Valid Q3 2026 · 25μm resolution</div>
+            <div class="cst-badge sold">Sold</div>
+          </div>
+          <div class="cst-token-price">$410</div>
+        </div>
+
+        <div class="cst-note">
+          CSTs launch with Phase 1 (Q2 2026). Founding makers get first access to list capacity — before any other manufacturer.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ PHASE 0 APPLICATION ══════════════════════════════ -->
+<section id="phase0">
+  <div class="container">
+    <div class="phase0-inner">
+
+      <!-- LEFT: pitch + perks -->
+      <div>
+        <div class="tag steel">Phase 0 — Founding Makers</div>
+        <h2 class="phase0-title">
+          20 Slots.<br/>
+          <em>First Come,</em><br/>
+          First Served.
+        </h2>
+        <p class="phase0-sub">We're hand-picking the first 20 manufacturers who will test, break, and shape OnChainMake before public launch. No fees. No subscription. Just your feedback.</p>
+
+        <div class="perks-list">
+          <div class="perk-item">
+            <div class="perk-icon">🆓</div>
+            <div>
+              <div class="perk-title">Zero cost during Phase 0</div>
+              <p class="perk-body">Full platform access — no subscription fees, no transaction fees. You give us feedback, we give you the tools.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">🔒</div>
+            <div>
+              <div class="perk-title">Founding member pricing</div>
+              <p class="perk-body">When Phase 1 launches, your rate is locked in permanently. You'll pay less than anyone who joins after you — forever.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">🎙️</div>
+            <div>
+              <div class="perk-title">Direct line to the founders</div>
+              <p class="perk-body">Monthly feedback sessions with Nicola and Lorenzo. Your production problems directly influence the roadmap.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">🏷️</div>
+            <div>
+              <div class="perk-title">First CST marketplace access</div>
+              <p class="perk-body">Founding makers get priority listing rights on the CST marketplace at launch — before any other manufacturer can list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: application form -->
+      <div class="apply-card">
+        <div class="apply-title">Apply as a Maker</div>
+        <p class="apply-sub">Takes 2 minutes. We'll follow up within 48 hours.</p>
+
+        <div class="slots-note">
+          <span>⚠️</span>
+          <span><strong>Phase 0 slots remaining:</strong> Limited to 20 founding makers.</span>
+        </div>
+        <!-- HubSpot embed — font injected via postMessage after iframe loads -->
+
+            <script src="https://js-eu1.hsforms.net/forms/embed/148421521.js" defer></script>
+            <div class="hs-form-frame" data-region="eu1" data-form-id="420f13be-db0e-47b1-8d55-ad2a4b71695d" data-portal-id="148421521"></div>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-mark">O</div>
+          <span class="logo-text">OnChain<span>Make</span></span>
+        </div>
+        <p>Instant settlement infrastructure for custom manufacturing. Built on Arbitrum. Powered by smart contracts.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="maker.html">For Makers</a></li>
+          <li><a href="buyer.html">For Buyers</a></li>
+          <li><a href="index.html#solution">How It Works</a></li>
+          <li><a href="#phase0">Apply — Phase 0</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OnChainMake Inc. · Delaware C-Corporation · All rights reserved.</p>
+      <div class="footer-badges">
+        <span class="badge badge-steel">Arbitrum</span>
+        <span class="badge badge-steel">USDC</span>
+        <span class="badge badge-gold">Phase 0</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // ── Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navDrawer  = document.getElementById('navDrawer');
+
+  function toggleNav() {
+    const isOpen = navDrawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleNav);
+  hamburger.addEventListener('touchend', e => { e.preventDefault(); toggleNav(); });
+
+  navDrawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navDrawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) {
+      navDrawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // ── Scroll fade-up animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // ── Form submit — wire to HubSpot when ready
+  function handleMakerSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Application Sent ✓';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+    // TODO: replace with HubSpot Forms API
+    // const portalId = 'YOUR_PORTAL_ID';
+    // const formGuid = 'YOUR_MAKER_FORM_GUID';
+    // const fields = [...new FormData(e.target)].map(([name, value]) => ({ name, value }));
+    // fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ fields })
+    // });
+  }
+</script>
+</body>
+</html>

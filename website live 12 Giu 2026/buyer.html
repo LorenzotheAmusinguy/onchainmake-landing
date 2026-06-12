@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnChainMake — For Buyers &amp; Procurement Teams</title>
+  <meta name="description" content="Order with certainty. OnChainMake smart contract escrow holds your funds securely and releases them only when production milestones are verified — automatically, on Arbitrum, with a full audit trail." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <img src="/onchainmakelogo.png" alt="OnChainMake logo">
+        </div>
+        <span class="logo-text">OnChain<span>Make</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#buyer-how">How It Works</a></li>
+        <li><a href="#buyer-benefits">Benefits</a></li>
+        <li><a href="#buyer-cta" class="active">Get Access</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+        <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="#buyer-how">How It Works</a>
+  <a href="#buyer-benefits">Benefits</a>
+  <a href="#buyer-cta">Get Access</a>
+  <div class="nav-drawer-cta">
+    <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+    <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+  </div>
+</div>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-inner buyer-grid">
+
+      <div>
+        <div class="hero-kicker buyer">For Buyers &amp; Procurement Teams</div>
+        <h1 class="hero-headline">
+          Verify capacity.<br/>
+          Tailored production.<br/>
+          <em>Verified settlement.</em>
+        </h1>
+        <p class="hero-sub">
+          You place the order. You hope it arrives on spec, on time.
+          You dispute it if it doesn't. <strong>OnChainMake removes the hope.</strong>
+          Smart contract escrow holds your funds and releases them
+          milestone by milestone — with an immutable audit trail at every step.
+        </p>
+        <div class="hero-actions">
+          <a href="#buyer-cta" class="btn btn-buyer btn-large">
+            Get Early Access
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#buyer-how" class="btn btn-ghost-green btn-large">See How It Works</a>
+        </div>
+        <p class="hero-note buyer">Your funds are protected by <span>smart contract logic</span> — not by trust alone.</p>
+      </div>
+
+      <div class="order-flow-panel">
+        <div class="ofp-header">
+          <span class="ofp-header-title">Active Order — Buyer View</span>
+          <span class="ofp-secured">Escrow Protected</span>
+        </div>
+        <div class="ofp-lock-bar">
+          <div class="ofp-lock-label">Total funds locked in escrow</div>
+          <div class="ofp-lock-amount">$48,500 USDC</div>
+          <div class="ofp-lock-sub">Contract: 0x7a3f…c42e · Arbitrum One · Audited</div>
+        </div>
+        <div class="ofp-milestones">
+          <div class="ofp-milestone">
+            <div class="ofp-m-dot"></div>
+            <span class="ofp-m-name">Milestone 1 — Print complete</span>
+            <span class="ofp-m-amount released">$14,550</span>
+            <span class="ofp-m-status ok">Released</span>
+          </div>
+          <div class="ofp-milestone">
+            <div class="ofp-m-dot"></div>
+            <span class="ofp-m-name">Milestone 2 — QA passed</span>
+            <span class="ofp-m-amount released">$19,400</span>
+            <span class="ofp-m-status ok">Released</span>
+          </div>
+          <div class="ofp-milestone">
+            <div class="ofp-m-dot active"></div>
+            <span class="ofp-m-name">Milestone 3 — Delivery</span>
+            <span class="ofp-m-amount in-progress">$14,550</span>
+            <span class="ofp-m-status live">In Progress</span>
+          </div>
+        </div>
+        <div class="ofp-cta-row">
+          <p>Every cent is visible and traceable. Funds release only when milestones are verified or return to you automatically if they're missed.</p>
+          <a href="#buyer-cta" class="btn btn-buyer btn-full">Request Early Access →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST STRIP -->
+<section id="trust-strip">
+  <div class="container">
+    <div class="trust-strip-inner">
+      <div class="trust-stat">
+        <div class="trust-num">100%</div>
+        <div class="trust-label">of buyer funds held in<br/>non-custodial smart contract escrow</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-num">$0</div>
+        <div class="trust-label">at risk if a milestone<br/>is missed or rejected</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-num">&lt;60s</div>
+        <div class="trust-label">to verify and release each<br/>production milestone on-chain</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="buyer-how">
+  <div class="container">
+    <div class="buyer-how-inner">
+
+      <div>
+        <div class="tag green">How It Works for Buyers</div>
+        <h2 class="section-title">Browse, Lock,<br/>Track, Approve.</h2>
+        <div class="divider green"></div>
+        <p class="section-sub">You stay in control at every stage. Funds never leave escrow until each milestone is independently verified on-chain.</p>
+
+        <div class="step-list mt-md">
+          <div class="step-item fade-up">
+            <div class="step-badge green">1</div>
+            <div>
+              <div class="step-title">Browse Verified Manufacturers</div>
+              <p class="step-body">Search a curated network of vetted makers by technology, location, and capacity. Request quotes, agree milestone terms, and confirm scope, all before a cent moves.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge green">2</div>
+            <div>
+              <div class="step-title">Lock Funds into Escrow</div>
+              <p class="step-body">Deposit USDC into an audited smart contract on Arbitrum. Your funds sit untouched — not held by OnChainMake, not accessible to the maker, until milestones are met.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge green">3</div>
+            <div>
+              <div class="step-title">Track Production in Real Time</div>
+              <p class="step-body">Every milestone is logged on-chain and visible on your dashboard. A tamper-proof, timestamped record at every step. No chasing suppliers for updates.</p>
+            </div>
+          </div>
+          <div class="step-item fade-up">
+            <div class="step-badge green">4</div>
+            <div>
+              <div class="step-title">Delivery Confirmed. Settlement Automatic.</div>
+              <p class="step-body">Final delivery triggers automatic payment release. If any milestone falls short, the smart contract enforces the agreed terms. You keep your funds or receive a proportional release — never exposed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="escrow-card">
+          <div class="escrow-header">🔒 How Escrow Protects You</div>
+          <div class="escrow-rows">
+            <div class="escrow-row">
+              <div class="e-icon">🏛️</div>
+              <div>
+                <div class="e-label">Non-Custodial</div>
+                <p class="e-body">Your USDC is locked in audited contract code. Neither OnChainMake nor the manufacturer can access it. Only verified milestone completion unlocks each tranche.</p>
+              </div>
+            </div>
+            <div class="escrow-row">
+              <div class="e-icon">📐</div>
+              <div>
+                <div class="e-label">Milestone-Gated Release</div>
+                <p class="e-body">You define the milestones and payment split upfront. Each tranche releases independently when that milestone is verified. No bulk releases, no surprises.</p>
+              </div>
+            </div>
+            <div class="escrow-row">
+              <div class="e-icon">⛓️</div>
+              <div>
+                <div class="e-label">Immutable Audit Trail</div>
+                <p class="e-body">Every deposit, verification, and release is logged permanently on Arbitrum. Your compliance team gets an exportable, tamper-proof record for every order.</p>
+              </div>
+            </div>
+            <div class="escrow-row">
+              <div class="e-icon">⚖️</div>
+              <div>
+                <div class="e-label">Automatic Dispute Resolution</div>
+                <p class="e-body">If a milestone is missed or disputed, the contract enforces the agreed terms without arbitration. Objective, fast, and final.</p>
+              </div>
+            </div>
+          </div>
+          <div class="escrow-footer">
+            <strong>USDC on Blockchain.</strong> Near-zero gas fees. Fully audited contracts. Settlement in under 60 seconds once a milestone is verified.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- BENEFITS -->
+<section id="buyer-benefits">
+  <div class="container">
+    <div class="tag green">Why Buyers Choose OnChainMake</div>
+    <h2 class="section-title">Built Around<br/>Your Certainty</h2>
+    <div class="divider green"></div>
+    <p class="section-sub">Every feature is designed to give you visibility, protection, and control, from first quote to final delivery.</p>
+
+    <div class="benefits-grid mt-lg">
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">🛡️</span>
+        <div class="benefit-title">Funds Never at Risk</div>
+        <p class="benefit-body">Your USDC is locked in an audited smart contract from day one. No prepayment risk. No chasing refunds. If it's not built to spec, it's not paid.</p>
+        <div class="benefit-metric">100%<small>of buyer funds protected by on-chain escrow</small></div>
+      </div>
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">📡</span>
+        <div class="benefit-title">Real-Time Visibility</div>
+        <p class="benefit-body">A live dashboard shows every milestone, status, and on-chain event. Stop chasing suppliers for progress reports: know exactly where your order is, always.</p>
+        <div class="benefit-metric">Live<small>production status at every milestone</small></div>
+      </div>
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">📁</span>
+        <div class="benefit-title">Compliance-Ready Records</div>
+        <p class="benefit-body">Every transaction and decision is recorded immutably on-chain. Export a full audit trail for ISO, FDA, or internal compliance reviews. Instantly, any time.</p>
+        <div class="benefit-metric">∞<small>tamper-proof records, always exportable</small></div>
+      </div>
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">📅</span>
+        <div class="benefit-title">Reserve Capacity Early</div>
+        <p class="benefit-body">Use Capacity Slot Tokens to purchase and hold production slots before your project is scoped. Lock in your queue position now. Redeem when you're ready to run.</p>
+        <div class="benefit-metric">CST<small>secure capacity before the queue fills</small></div>
+      </div>
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">⚖️</span>
+        <div class="benefit-title">Disputes Solved</div>
+        <p class="benefit-body">Milestone terms are written into contract code, not emails. The outcome is objective, enforceable, and final. Ambiguity is designed out from the start.</p>
+        <div class="benefit-metric">0<small>disputes when milestone terms are on-chain</small></div>
+      </div>
+      <div class="benefit-card buyer-card fade-up">
+        <span class="benefit-icon">🔌</span>
+        <div class="benefit-title">Integrates with Your Stack</div>
+        <p class="benefit-body">API-first architecture connects to your ERP, procurement system, or project tools. Zapier connector for no-code setups. Plugs into how you already work.</p>
+        <div class="benefit-metric">API<small>connects to your existing procurement workflow</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CST — BUYER VIEW -->
+<section id="buyer-cst">
+  <div class="container">
+    <div class="buyer-cst-inner">
+
+      <div>
+        <div class="tag green">Capacity Slot Tokens</div>
+        <h2 class="section-title">Reserve the<br/>Capacity You Need.</h2>
+        <div class="divider green"></div>
+        <p class="section-sub mb-sm">The best manufacturers fill up fast. CSTs let you purchase and hold a production slot before your project is fully scoped. Pay now, redeem when you're ready to run.</p>
+        <p class="section-sub">Think of it as a manufacturing futures market. You lock in your queue position today, the maker gets predictable revenue, and the smart contract enforces everything.</p>
+        <div class="mt-lg">
+          <a href="#buyer-cta" class="btn btn-buyer btn-large">
+            Browse Available Capacity
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="capacity-card">
+        <div class="capacity-card-label">Available Capacity — Live Listings</div>
+        <div class="capacity-filters">
+          <span class="cap-filter active">All</span>
+          <span class="cap-filter">SLA / DLP</span>
+          <span class="cap-filter">FDM</span>
+          <span class="cap-filter">SLS / MJF</span>
+          <span class="cap-filter">Metal AM</span>
+        </div>
+        <div class="cst-token buyer-token">
+          <div class="cst-token-icon">🖨️</div>
+          <div>
+            <div class="cst-token-name">SLA Slot · 48hr Run</div>
+            <div class="cst-token-meta">Valid Q2 2026 · Build vol. up to 2L · Pennsylvania, US</div>
+            <div class="cst-badge available">Available</div>
+          </div>
+          <div class="cst-token-price">$320</div>
+        </div>
+        <div class="cst-token buyer-token">
+          <div class="cst-token-icon">⚙️</div>
+          <div>
+            <div class="cst-token-name">FDM Run · 5 units</div>
+            <div class="cst-token-meta">Valid Q2 2026 · ABS or PETG · New Jersey, US</div>
+            <div class="cst-badge available">Available</div>
+          </div>
+          <div class="cst-token-price">$180</div>
+        </div>
+        <div class="cst-token buyer-token">
+          <div class="cst-token-icon">🔩</div>
+          <div>
+            <div class="cst-token-name">SLS Batch · 20 parts</div>
+            <div class="cst-token-meta">Valid Q3 2026 · Nylon PA12 · Texas, US</div>
+            <div class="cst-badge available">Available</div>
+          </div>
+          <div class="cst-token-price">$740</div>
+        </div>
+        <div class="cst-note">
+          CST marketplace launches with Phase 1 (Q2 2026). Early access buyers can browse and reserve capacity before public launch.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- BUYER CTA + FORM -->
+<section id="buyer-cta">
+  <div class="container">
+    <div class="buyer-cta-inner">
+
+      <div>
+        <div class="tag green">Get Early Access</div>
+        <h2 class="buyer-cta-title">
+          Stop Hoping.<br/>
+          Start Knowing<br/>
+          <em>It's Done.</em>
+        </h2>
+        <p class="buyer-cta-sub">We're onboarding a small cohort of buyers alongside our founding makers so both sides can transact on the platform from day one. No fees during Phase 0.</p>
+
+        <div class="trust-list">
+          <div class="trust-item">
+            <div class="trust-icon">🔒</div>
+            <div>
+              <div class="trust-title">Your funds, your control</div>
+              <p class="trust-body">Non-custodial escrow on Blockchain. OnChainMake can never touch your USDC. Only the smart contract can, and only when conditions are met.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🧾</div>
+            <div>
+              <div class="trust-title">Compliance-ready from day one</div>
+              <p class="trust-body">Every order generates an immutable on-chain record. Export audit logs for ISO, FDA, or internal reviews. One click, any time.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✅</div>
+            <div>
+              <div class="trust-title">Access to vetted manufacturers</div>
+              <p class="trust-body">Every maker on the platform is onboarded and verified before listing. You browse a curated network. Reliability is built into membership.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⚡</div>
+            <div>
+              <div class="trust-title">No crypto experience needed</div>
+              <p class="trust-body">OnChainMake handles the blockchain layer. You interact with a clean dashboard — USDC top-up, milestone tracking, payment history in plain English.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="enquiry-card">
+        <div class="enquiry-title">Request Early Access</div>
+        <p class="enquiry-sub">Tell us about your procurement needs. We'll be in touch within 48 hours.</p>
+
+        <script src="https://js-eu1.hsforms.net/forms/embed/148421521.js" defer></script>
+<div class="hs-form-frame" data-region="eu1" data-form-id="95796405-e95a-49ce-94d6-e5c1f17c4b93" data-portal-id="148421521"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-mark">O</div>
+          <span class="logo-text">OnChain<span>Make</span></span>
+        </div>
+        <p>Instant settlement infrastructure for custom manufacturing. Built on Arbitrum. Powered by smart contracts.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="maker.html">For Makers</a></li>
+          <li><a href="buyer.html">For Buyers</a></li>
+          <li><a href="index.html#solution">How It Works</a></li>
+          <li><a href="maker.html#phase0">Apply — Phase 0</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OnChainMake Inc. · Delaware C-Corporation · All rights reserved.</p>
+      <div class="footer-badges">
+        <span class="badge badge-green">Arbitrum</span>
+        <span class="badge badge-green">USDC</span>
+        <span class="badge badge-gold">Phase 0</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navDrawer  = document.getElementById('navDrawer');
+  function toggleNav() {
+    const isOpen = navDrawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleNav);
+  hamburger.addEventListener('touchend', e => { e.preventDefault(); toggleNav(); });
+  navDrawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navDrawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) {
+      navDrawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // Capacity filter tabs (UI only — data filtering wired in Phase 1)
+  document.querySelectorAll('.cap-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cap-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Form submit — stub for HubSpot
+  function handleBuyerSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.innerHTML = 'Request Sent ✓';
+    btn.style.background = '#22c55e';
+    btn.style.color = '#23395B';
+    btn.disabled = true;
+    // TODO: HubSpot Forms API
+    // const portalId = 'YOUR_PORTAL_ID';
+    // const formGuid = 'YOUR_BUYER_FORM_GUID';
+    // const fields   = [...new FormData(e.target)].map(([name, value]) => ({ name, value }));
+    // fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+    //   method: 'POST', headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ fields })
+    // });
+  }
+</script>
+</body>
+</html>
