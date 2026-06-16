@@ -2052,3 +2052,32 @@
 
 /* LEGAL PAGE*/
 .legal-page {margin:150px;}
+
+/* OCM transparent horizontal logo alignment — policy/logo refresh */
+.logo-wrap--horizontal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+}
+.site-logo-horizontal {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+}
+.site-logo-horizontal--footer {
+  height: 54px;
+  max-width: 300px;
+}
+@media (max-width: 720px) {
+  .site-logo-horizontal {
+    height: 42px;
+    max-width: 215px;
+  }
+  .site-logo-horizontal--footer {
+    height: 46px;
+    max-width: 240px;
+  }
+}

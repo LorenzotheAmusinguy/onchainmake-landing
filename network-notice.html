@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Notice — OnChainMake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-wrap logo-wrap--horizontal" aria-label="OnChainMake home">
+
+        <img src="assets/ocm-logo-horizontal.png" alt="OnChainMake — Make to Order, the Smart Way" class="site-logo-horizontal" />
+
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="maker.html">Makers</a></li>
+        <li><a href="buyer.html">Buyers</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+        <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="maker.html">Makers</a>
+  <a href="buyer.html">Buyers</a>
+  <div class="nav-drawer-cta">
+    <a href="maker.html" class="btn btn-maker">I'm a Maker</a>
+    <a href="buyer.html" class="btn btn-buyer">I'm a Buyer</a>
+  </div>
+</div>
+
+
+
+<div class="legal-page">
+  <h1>OnChainMake Network Notice</h1>
+  <p class="legal-meta">Version 1.1 &middot; Effective June 2026 &middot; Blockchain network notice &middot; Contact: info@onchainmake.com</p>
+
+  <p>This Network Notice explains how blockchain network information is handled during the OnChainMake pilot.</p>
+  <p>During the pilot, OnChainMake may operate on selected EVM-compatible test networks, production networks or staged deployment environments.</p>
+
+  <hr />
+  <h2>1. Network Disclosure</h2>
+  <p>The applicable network for any specific transaction, smart contract interaction, wallet prompt, escrow action, CST, DPP or verifier-related workflow will be identified through one or more of the following: the user interface, wallet prompt, transaction confirmation screen, deployment notice, smart contract address display, direct pilot documentation or administrator communication.</p>
+
+  <h2>2. User Verification</h2>
+  <p>Users must verify the displayed network, token address, contract address, amount and transaction details before signing any wallet transaction.</p>
+
+  <h2>3. Third-Party Network Risks</h2>
+  <p>OnChainMake does not control public blockchain networks, wallet providers, gas fees, failed transactions, transaction delays, network congestion, block explorers, bridges, third-party tokens or user wallet security.</p>
+
+  <h2>4. Pilot Status</h2>
+  <p>Some blockchain-related features may be unavailable, simulated, disabled, staged or manually supervised during the pilot.</p>
+  <p>Unless expressly confirmed in the user interface or written pilot documentation, no statement on the website should be interpreted as a guarantee that a particular blockchain network, token, smart contract, CST, DPP or escrow deployment is active for production use.</p>
+  <p>Users should not send funds, tokens or assets to any address unless the Platform clearly instructs them to do so and they have independently verified the transaction details.</p>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap logo-wrap--horizontal" aria-label="OnChainMake">
+
+          <img src="assets/ocm-logo-horizontal.png" alt="OnChainMake — Make to Order, the Smart Way" class="site-logo-horizontal site-logo-horizontal--footer" />
+
+        </div>
+        <p>Controlled-access pilot for make-to-order capacity, milestones, verification and escrow workflows.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="maker.html">For Makers</a></li>
+          <li><a href="buyer.html">For Buyers</a></li>
+          <li><a href="index.html#solution">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="phase0.html">Phase 0 Pilot Notice</a></li>
+          <li><a href="network-notice.html">Network Notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OnChainMake · Controlled-access pilot · All rights reserved.</p>
+      <div class="footer-badges">
+        <span class="badge badge-steel">EVM-compatible</span>
+        <span class="badge badge-steel">Verifier-ready</span>
+        <span class="badge badge-gold">Phase 0 Pilot</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navDrawer  = document.getElementById('navDrawer');
+  function toggleNav() {
+    const isOpen = navDrawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleNav);
+  hamburger.addEventListener('touchend', e => { e.preventDefault(); toggleNav(); });
+  navDrawer.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+    navDrawer.classList.remove('open'); hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+  }));
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) { navDrawer.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow=''; }
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const t = document.querySelector(link.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth' }); }
+    });
+  });
+
+</script>
+</body>
+</html>
