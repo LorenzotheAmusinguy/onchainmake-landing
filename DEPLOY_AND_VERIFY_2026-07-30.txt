@@ -1,0 +1,33 @@
+ONCHAINMAKE WEBSITE — DEPLOY AND VERIFY
+
+SOURCE REPOSITORY
+LorenzotheAmusinguy/onchainmake-landing
+Production branch: main
+Cloudflare project: onchainmake-landing
+
+UPLOAD
+1. Extract this ZIP.
+2. Open the GitHub repository.
+3. Choose Add file > Upload files.
+4. Drag the CONTENTS of the extracted folder into GitHub. Do not upload the outer folder as a new nested directory.
+5. Commit message: Add GA4 with consent controls
+6. Commit to main. Cloudflare will deploy automatically.
+
+VERIFY AFTER CLOUDFLARE SHOWS SUCCESS
+1. Open https://onchainmake.com in a private/incognito window.
+2. The privacy banner must appear.
+3. Before accepting, browser cookies must not contain _ga or _ga_*.
+4. Select Accept analytics.
+5. Reload the page and navigate to buyer.html and maker.html.
+6. Confirm Google Analytics Realtime shows the visit.
+7. Select Cookie settings in the footer, then Reject optional.
+8. The page reloads and _ga / _ga_* cookies should be removed.
+9. Verify the website still loads correctly on desktop and mobile.
+
+ROLLBACK
+If the site does not work, use Cloudflare Pages > onchainmake-landing > Deployments and roll back to production commit cfabc36.
+
+DO NOT
+- Do not touch the onchainmakemvp Cloudflare project.
+- Do not change DNS or custom domains.
+- Do not add the Google tag a second time through Google Tag Manager.
