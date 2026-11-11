@@ -2237,3 +2237,11 @@
   }
 }
 .ocm-consent-title:focus { outline: none; }
+
+/* Legal reconciliation 2026-11-11: readable tables and no change to site branding */
+.legal-page{width:min(1100px,calc(100% - 40px));margin:110px auto 70px;line-height:1.72}
+.legal-page h2{margin:34px 0 14px}.legal-page h3{margin:22px 0 10px}
+.legal-page table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow-x:auto;margin:14px 0 24px}
+.legal-page th,.legal-page td{border:1px solid #d9e3eb;padding:11px 12px;min-width:140px;vertical-align:top;text-align:left}
+.legal-page th{background:rgba(143,165,180,.13)}.legal-page .legal-meta{font-size:13px;opacity:.85}
+.legal-page hr{margin:28px 0;opacity:.25}
