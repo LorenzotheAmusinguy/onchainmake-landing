@@ -3,7 +3,7 @@
 
   var MEASUREMENT_ID = "G-XLG2N4EMG5";
   var STORAGE_KEY = "ocm_cookie_consent_v1";
-  var CONSENT_VERSION = "2026-07-30";
+  var CONSENT_VERSION = "2026-11-11";
   var analyticsLoaded = false;
 
   window.dataLayer = window.dataLayer || [];
@@ -69,6 +69,9 @@
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       anonymize_ip: true,
+      // Distinguish this industrial preview from the current landing in GA4.
+      // Register "site_variant" as an event-scoped custom dimension in GA4 Admin for reporting.
+      site_variant: "industrial_v8_2",
       send_page_view: true
     });
 
@@ -168,7 +171,7 @@
       '  <div class="ocm-consent-header">',
       '    <div>',
       '      <h2 class="ocm-consent-title" id="ocm-consent-title" tabindex="-1">Your privacy choices</h2>',
-      '      <p class="ocm-consent-copy" id="ocm-consent-copy">We use necessary technologies to operate this website. With your permission, we also use Google Analytics 4 to understand visits and improve the Phase 0 pilot. Analytics remains off unless you accept. Read our <a href="cookies.html">Cookie Policy</a>.</p>',
+      '      <p class="ocm-consent-copy" id="ocm-consent-copy">We use necessary technologies to operate this website. With your permission, we also use Google Analytics 4 to understand visits and improve this industrial website. Analytics remains off unless you accept. Read our <a href="cookies.html">Cookie Policy</a>.</p>',
       '    </div>',
       '    <button type="button" class="ocm-consent-close" data-consent-close aria-label="Close and keep optional cookies off">&times;</button>',
       '  </div>',
@@ -194,7 +197,8 @@
     document.querySelectorAll("[data-cookie-settings]").forEach(function (button) {
       if (button.getAttribute("data-cookie-settings-bound") === "true") return;
       button.setAttribute("data-cookie-settings-bound", "true");
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
         createBanner();
         showBanner();
       });
